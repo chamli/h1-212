@@ -126,7 +126,8 @@ https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploi
 i notice i can use "feed line" to make 2 request or more !!
 
 ```
-{"domain":"localhost/flag\r\n212.test.com"} 
+{"domain":"localhost/flag\n212.test.com"} 
+{"domain":"localhost/server-status\n212.test.com"} 
 ```
 
 with this data it will increment id+2
