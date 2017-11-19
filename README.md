@@ -103,7 +103,7 @@ THEN START PLAY WITH JSON DATA
 
 ![image](https://user-images.githubusercontent.com/7364615/32996628-6e864b56-cd85-11e7-9749-30779d47e516.png)
 
-Until fix taht output 
+Until fix that output 
 
 
 And after send domain 
