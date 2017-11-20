@@ -7,74 +7,42 @@ so first i start brute force and crawl directory to check if possible to get som
 
 then i used virtual-host-discovery tool to get all virtual host there 
 
+```
 Found: www.acme.org (200)
-
 Found: dev.acme.org (200)
-
 Found: local (200)
-
 Found: localhost (200)
-
 Found: status.acme.org (200)
-
 Found: status (200)
-
 Found: staging.acme.org (200)
-
 Found: staging (200)
-
 Found: development (200)
-
 Found: development.acme.org (200)
-
 Found: uat (200)
-
 Found: uat.acme.org (200)
-
 Found: acme.org (200)
-
 Found: beta (200)
-
 Found: beta.acme.org (200)
-
 Found: secure (200)
-
 Found: secure.acme.org (200)
-
 Found: mobile (200)
-
 Found: mobile.acme.org (200)
-
 Found: 127.0.0.1 (200)
-
 Found: m.acme.org (200)
-
 Found: m (200)
-
 Found: admin (200)
-
 Found: admin.acme.org (200)
-
 Found: old (200)
-
 Found: old.acme.org (200)
-
 Found: v1.acme.org (200)
-
 Found: v1 (200)
-
 Found: v2.acme.org (200)
-
 Found: v2 (200)
-
 Found: v3.acme.org (200)
-
 Found: v3 (200)
-
 Found: alpha (200)
-
 Found: alpha.acme.org (200)
-
+```
 so as description said : admin.acme.org this is the one :D 
 (An engineer of acme.org launched a new server for a new admin panel)
 ```
