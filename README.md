@@ -118,7 +118,7 @@ Then when i start look for flag , i didnt get the point , Because i get always N
 {"domain":"localhost/flag\n212.test.com"}  
 ```
 
-And then make brute force wusing Burp Suite ,But before the that get end i check 1337 as its for "leet" :D 
+And then make brute force using Burp Suite ,But before that get end , i check 1337 as its for "Leet" guys :D 
 
 And Yeah found port 1337 open :D 
 ```
