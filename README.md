@@ -83,6 +83,10 @@ So by send random data we get second error 'domain' required
 
 By start send random domain "www.test.com" make it work and get another error :D  
 
+```
+{"error":{"domain":"incorrect value, sub domain should contain 212"}}
+```
+
 ![image](https://user-images.githubusercontent.com/7364615/32996636-7dab1698-cd85-11e7-8a26-a8c27b0cfab0.png)
 
 so when domain is valid we get data base64 (Easy way to get that valid domain site:212.*.com) 
