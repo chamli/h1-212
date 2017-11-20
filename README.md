@@ -3,9 +3,15 @@
 OK here is my write up 
 
 
-so first i start brute force and crawl directory to check if possible to get some files there
+so first i start brute force and crawl directory to check if possible to get some files there (using my tool https://github.com/chamli/CyberCrowl)
 
 then i used virtual-host-discovery tool to get all virtual host there 
+
+(i know that jobertabma make this task so that's why i checked his github :D and yeah it was there ) 
+
+![image](https://user-images.githubusercontent.com/7364615/33027283-f949a3ae-ce12-11e7-98f5-222dcb97319e.png)
+
+![image](https://user-images.githubusercontent.com/7364615/33027406-4acf6b14-ce13-11e7-9310-770652435ca4.png)
 
 ```
 Found: www.acme.org (200)
@@ -45,6 +51,8 @@ Found: alpha.acme.org (200)
 ```
 so as description said : admin.acme.org this is the one :D 
 (An engineer of acme.org launched a new server for a new admin panel)
+
+After that i st
 ```
 root@ip-172-31-20-83:/home/ubuntu# curl -I http://admin.acme.org
 HTTP/1.1 200 OK
@@ -53,7 +61,7 @@ Server: Apache/2.4.18 (Ubuntu)
 Set-Cookie: admin=no
 Content-Type: text/html; charset=UTF-8
 ```
-next i start get 406 
+next i start get 406 after make admin=yes and change GET to POST
 
 ![image](https://user-images.githubusercontent.com/7364615/32996613-4079913c-cd85-11e7-8b8c-6ba8b8aa1192.png)
 
@@ -62,7 +70,7 @@ so i get some stackoverflow solution which ask to look for good content-type
 https://stackoverflow.com/questions/14251851/what-is-406-not-acceptable-response-in-http
 ```
 
-brute force all type possible get that application/json is the one :d
+brute force all type possible get that "application/json" is the one :D 
 
 ![image](https://user-images.githubusercontent.com/7364615/32996624-64af4498-cd85-11e7-8b15-b046b0d6b4de.png)
 
@@ -71,29 +79,44 @@ THEN START PLAY WITH JSON DATA
 
 ![image](https://user-images.githubusercontent.com/7364615/32996628-6e864b56-cd85-11e7-9749-30779d47e516.png)
 
-Until fix that output 
+So by send random data we get second error 'domain' required
 
+By start send random domain "www.test.com" make it work and get another error :D  
 
-And after send domain 
 ![image](https://user-images.githubusercontent.com/7364615/32996636-7dab1698-cd85-11e7-8a26-a8c27b0cfab0.png)
 
-so when domain is valid we get data base64
+so when domain is valid we get data base64 (Easy way to get that valid domain site:212.*.com) 
+
+![image](https://user-images.githubusercontent.com/7364615/33027790-629d5b6a-ce14-11e7-824e-3a79ac055f67.png)
+
 
 ![image](https://user-images.githubusercontent.com/7364615/32996640-8aa5e800-cd85-11e7-80e4-04356e646d68.png)
 
 which is the source code of that website
 
-:D its look ssrf here guys :D
+Its' look like SSRF here guys :D 
 
-
-lets bypass .com and 212 containe
+So just need to bypass .com and 212 containe , if we send domain with 212.*.com we can break all check 
 
 after read alot from here (thx orange ) and other article 
 https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploiting-URL-Parser-In-Trending-Programming-Languages.pdf 
 
-i notice i can use "feed line" to make 2 request or more !!
+i notice i can use "feed line" to make 2 request or more !! (\n) 
 
-and then make brute force wen found some open port 22,1337
+In this case it will make three request "localhost","212.test.com","212.hahahah.com"
+```
+{"domain":"localhost\n212.test.com\n212.hahahah.com"}  
+```
+
+Then when i start look for flag , i didnt get the point , Because i get always Null data for the first request of localhost
+
+```
+{"domain":"localhost/flag\n212.test.com"}  
+```
+
+And then make brute force wusing Burp Suite ,But before the that get end i check 1337 as its for "leet" :D 
+
+And Yeah found port 1337 open :D 
 ```
 {"domain":"localhost:1337/flag\n212.test.com"}  
 {"domain":"localhost/server-status\n212.test.com"} 
