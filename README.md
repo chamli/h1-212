@@ -125,8 +125,9 @@ https://www.blackhat.com/docs/us-17/thursday/us-17-Tsai-A-New-Era-Of-SSRF-Exploi
 
 i notice i can use "feed line" to make 2 request or more !!
 
+and then make brute force wen found some open port 22,1337
 ```
-{"domain":"localhost/flag\n212.test.com"} 
+{"domain":"localhost:1337/flag\n212.test.com"}  
 {"domain":"localhost/server-status\n212.test.com"} 
 ```
 
@@ -138,6 +139,12 @@ id+1 for localhost and id+2 for 212.test.com
 So just get request of the id+1 get make us read the flag 
 
 then base64 flag data and pwn it :D
+
+1337 : leet port :D
+
+![image](https://user-images.githubusercontent.com/7364615/33025984-b0f7e3f2-ce0f-11e7-8513-ee303f78c264.png)
+
+FLAG: CF,2dsV\/]fRAYQ.TDEp`w"M(%mU;p9+9FD{Z48X*Jtt{%vS($g7\S):f%=P[Y@nka=<tqhnF<aq=K5:BC@Sb*{[%z"+@yPb/nfFna<e$hv{p8r2[vMMF52y:z/Dh;{6
 
 
 Amazing ctf :D
