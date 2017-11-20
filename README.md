@@ -133,7 +133,7 @@ And Yeah found port 1337 open :D
 
 with this data it will increment id+2
 
-id+1 for localhost and id+2 for 212.test.com
+id-1 for localhost and last id for 212.test.com
 
 
 So just get request of the id+1 get make us read the flag 
