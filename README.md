@@ -49,8 +49,10 @@ Found: v3 (200)
 Found: alpha (200)
 Found: alpha.acme.org (200)
 ```
-so as description said : admin.acme.org this is the one :D 
+so as description said :  
 (An engineer of acme.org launched a new server for a new admin panel)
+
+admin.acme.org this is the one :D
 
 After that i check header : 
 ```
