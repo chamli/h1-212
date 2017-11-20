@@ -7,7 +7,7 @@ so first i start brute force and crawl directory to check if possible to get som
 
 then i used virtual-host-discovery tool to get all virtual host there 
 
-(i know that jobertabma make this task so that's why i checked his github :D and yeah it was there ) 
+(i know that jobert make this task so that's why i checked his github :D and yeah it was there ) 
 
 ![image](https://user-images.githubusercontent.com/7364615/33027283-f949a3ae-ce12-11e7-98f5-222dcb97319e.png)
 
@@ -52,7 +52,7 @@ Found: alpha.acme.org (200)
 so as description said : admin.acme.org this is the one :D 
 (An engineer of acme.org launched a new server for a new admin panel)
 
-After that i st
+After that i check header : 
 ```
 root@ip-172-31-20-83:/home/ubuntu# curl -I http://admin.acme.org
 HTTP/1.1 200 OK
@@ -61,7 +61,7 @@ Server: Apache/2.4.18 (Ubuntu)
 Set-Cookie: admin=no
 Content-Type: text/html; charset=UTF-8
 ```
-next i start get 406 after make admin=yes and change GET to POST
+next i start get 406 after make( admin=yes ) and change (GET to POST)
 
 ![image](https://user-images.githubusercontent.com/7364615/32996613-4079913c-cd85-11e7-8b8c-6ba8b8aa1192.png)
 
@@ -98,7 +98,7 @@ Then send request
 
 which is the source code of that website
 
-Its' look like SSRF here guys :D 
+It's look like SSRF here guys :D 
 
 So just need to bypass .com and 212 containe , if we send domain with 212.*.com we can break all check 
 
