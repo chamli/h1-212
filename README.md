@@ -131,6 +131,9 @@ and then make brute force wen found some open port 22,1337
 {"domain":"localhost/server-status\n212.test.com"} 
 ```
 
+![image](https://user-images.githubusercontent.com/7364615/33026321-766f86f8-ce10-11e7-9fdd-544673744e51.png)
+
+
 with this data it will increment id+2
 
 id+1 for localhost and id+2 for 212.test.com
